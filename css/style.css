@@ -1,1 +1,748 @@
 
+/* =========================================
+   SAVANNA BREW CAFE - MAIN STYLESHEET
+   ========================================= */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* COLOUR VARIABLES */
+:root {
+    --coffee-brown: #781F45;
+    --cream: #FFF5DF;
+    --orange: #F5CC52;
+    --dark-brown: #593044;
+    --white: #FFFFFF;
+    --light-brown: #F2A6C0;
+
+    --vanilla: #FFF5DF;
+    --honey-yellow: #F5CC52;
+    --pink: #F2A6C0;
+    --burgundy: #781F45;
+    --purple: #8060A8;
+}
+
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dark-brown);
+    background-color: var(--cream);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER AND NAVIGATION
+   ========================================= */
+
+header {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo h2 {
+    color: var(--orange);
+    font-size: 27px;
+}
+
+.logo p {
+    color: var(--cream);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+    color: var(--orange);
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--coffee-brown);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background-image:
+        linear-gradient(rgba(43, 27, 18, 0.65),
+                        rgba(43, 27, 18, 0.65)),
+        url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600');
+
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.tagline {
+    color: var(--orange);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 65px 0;
+}
+
+.welcome h2 {
+    color: var(--coffee-brown);
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.featured {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.featured h2 {
+    color: var(--coffee-brown);
+    margin-bottom: 35px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product-card {
+    flex: 1;
+    background-color: var(--cream);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(43, 27, 18, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: var(--coffee-brown);
+    margin: 15px 10px 8px;
+}
+
+.product-card p {
+    padding: 0 12px;
+}
+
+.product-card strong {
+    color: var(--orange);
+}
+
+.reservation {
+    padding: 65px 0;
+    text-align: center;
+    background-color: var(--coffee-brown);
+    color: var(--white);
+}
+
+.reservation h2 {
+    margin-bottom: 15px;
+}
+
+.reservation p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+
+.about-section {
+    padding: 60px 0;
+}
+
+.about-section > .container > h1 {
+    text-align: center;
+    color: var(--coffee-brown);
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--coffee-brown);
+    margin-bottom: 20px;
+}
+
+.values-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.values-section h2 {
+    color: var(--coffee-brown);
+    margin-bottom: 35px;
+}
+
+.values-container {
+    display: flex;
+    gap: 25px;
+}
+
+.value-card {
+    flex: 1;
+    background-color: var(--cream);
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--orange);
+}
+
+.value-card h3 {
+    color: var(--coffee-brown);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    margin-bottom: 0;
+}
+
+.about-quote {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-quote blockquote {
+    border-left: 5px solid var(--orange);
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 15px 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-style: italic;
+    color: var(--coffee-brown);
+}
+
+.about-quote p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   MENU PAGE
+   ========================================= */
+
+.menu-section {
+    padding: 60px 0;
+}
+
+.menu-section h1 {
+    text-align: center;
+    color: var(--coffee-brown);
+    margin-bottom: 15px;
+}
+
+.menu-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.menu-section h2 {
+    color: var(--coffee-brown);
+    margin: 35px 0 15px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 35px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-brown);
+}
+
+th {
+    background-color: var(--coffee-brown);
+    color: var(--white);
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cream);
+}
+
+tbody tr:hover {
+    background-color: var(--light-brown);
+}
+
+
+/* =========================================
+   GALLERY PAGE
+   ========================================= */
+
+.gallery-section {
+    padding: 60px 0;
+}
+
+.gallery-section h1 {
+    text-align: center;
+    color: var(--coffee-brown);
+    margin-bottom: 15px;
+}
+
+.gallery-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.gallery-grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 4px 12px rgba(43, 27, 18, 0.12);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-grid figure:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-grid figcaption {
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--coffee-brown);
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-section {
+    padding: 60px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: var(--coffee-brown);
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.contact-info,
+.reservation-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h2,
+.reservation-form h2 {
+    color: var(--coffee-brown);
+    margin-bottom: 25px;
+}
+
+.contact-info h3 {
+    color: var(--coffee-brown);
+    margin: 25px 0 12px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C9B5A2;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--orange);
+    border-color: var(--orange);
+}
+
+fieldset {
+    border: 1px solid #C9B5A2;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--coffee-brown);
+    padding: 0 8px;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 15px;
+}
+
+fieldset input {
+    accent-color: var(--orange);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 40px 0 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-container > div {
+    flex: 1;
+}
+
+.footer-container h3 {
+    color: var(--orange);
+    margin-bottom: 15px;
+}
+
+.footer-container p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--orange);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #665044;
+    margin: 30px 5% 0;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET AND MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    /* HOME PAGE */
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
+
+    /* ABOUT PAGE */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .values-container {
+        flex-direction: column;
+    }
+
+    /* GALLERY PAGE */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CONTACT PAGE */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* SMALL MOBILE SCREENS */
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .contact-info,
+    .reservation-form {
+        padding: 20px;
+    }
+
+    .about-quote blockquote {
+        font-size: 22px;
+    }
+
+}
+
